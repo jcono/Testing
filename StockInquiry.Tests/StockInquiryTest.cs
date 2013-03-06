@@ -1,5 +1,4 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Testing.Browser;
 
 namespace StockInquiry.Tests
@@ -18,28 +17,5 @@ namespace StockInquiry.Tests
         {
         }
 
-    }
-
-    public class StockInquiryContext : BrowserTestContext
-    {
-        public void AmTryingToFindStockAvailability()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Action SearchForTheStyle(string abc)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Action ShouldSeeTheSKUsFor(string abc)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Action KnowThatStockExists(string abc)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
