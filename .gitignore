@@ -1,0 +1,14 @@
+*obj*
+*bin*
+*[R|r]e[S|s]harper*
+*.suo
+*.cache
+*~
+*.swp
+*.pyo
+*.dat
+.DS_Store
+*.user
+*TestResult.xml
+packages/
+*.ncrunch*
