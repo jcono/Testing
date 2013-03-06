@@ -41,6 +41,11 @@
     <Compile Include="Google\Test\SearchExampleTest.cs" />
     <Compile Include="Google\Model\Pages\HomePage.cs" />
     <Compile Include="Google\Model\Fragments\SearchResult.cs" />
+    <Compile Include="Stock\TestData\BenShermans.cs" />
+    <Compile Include="Stock\Domain\SKU.cs" />
+    <Compile Include="Stock\StockInquiryTest.cs" />
+    <Compile Include="Stock\StockInquiryTestContext.cs" />
+    <Compile Include="Stock\Domain\Style.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Testing\Testing.csproj">
@@ -52,6 +57,7 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
