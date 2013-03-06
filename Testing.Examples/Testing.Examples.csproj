@@ -37,10 +37,10 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BrowserExampleTestContext.cs" />
-    <Compile Include="BrowserExampleTest.cs" />
-    <Compile Include="HomePage.cs" />
-    <Compile Include="SearchResult.cs" />
+    <Compile Include="Google\Test\SearchExampleTestContext.cs" />
+    <Compile Include="Google\Test\SearchExampleTest.cs" />
+    <Compile Include="Google\Model\Pages\HomePage.cs" />
+    <Compile Include="Google\Model\Fragments\SearchResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Testing\Testing.csproj">
