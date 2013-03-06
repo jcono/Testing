@@ -4,7 +4,7 @@ using Testing.Browser;
 
 namespace StockInquiry.Tests
 {
-    public class Class1: BrowserTest<StockInquiryContext>
+    public class StockInquiryTest: BrowserTest<StockInquiryContext>
     {
         [Test]
         public void SimpleSKUInquiry()
