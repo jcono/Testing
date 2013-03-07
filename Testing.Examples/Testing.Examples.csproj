@@ -41,11 +41,6 @@
     <Compile Include="Google\Test\SearchExampleTest.cs" />
     <Compile Include="Google\Model\Pages\HomePage.cs" />
     <Compile Include="Google\Model\Fragments\SearchResult.cs" />
-    <Compile Include="Stock\TestData\BenShermans.cs" />
-    <Compile Include="Stock\Domain\SKU.cs" />
-    <Compile Include="Stock\StockInquiryTest.cs" />
-    <Compile Include="Stock\StockInquiryTestContext.cs" />
-    <Compile Include="Stock\Domain\Style.cs" />
     <Compile Include="StockInquiry\BenSherman.cs" />
     <Compile Include="StockInquiry\SKUResult.cs" />
     <Compile Include="StockInquiry\StockInquiryResultsPage.cs" />

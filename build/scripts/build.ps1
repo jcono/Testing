@@ -4,7 +4,7 @@ $NUnitConsole = "$RootDir\packages\NUnit.Runners.2.6.2\tools\nunit-console.exe"
 Task default -depends Test
 
 Task Test -depends Compile {
-	$TestCommand = "$NUnitConsole $RootDir\StockInquiry.Tests\bin\Release\StockInquiry.Tests.dll"
+	$TestCommand = "$NUnitConsole $RootDir\Testing.Examples\bin\Release\Testing.Examples.dll"
 	iex $TestCommand
   	if ($lastexitcode -ne 0)
   	{
