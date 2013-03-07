@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{99E7C9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SKUApp", "SKUApp\SKUApp.csproj", "{C90B6486-02BC-4C75-BD2E-749AED2C05F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Data", "Testing.Data\Testing.Data.csproj", "{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Domain\Models.csproj", "{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +36,14 @@ Global
 		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

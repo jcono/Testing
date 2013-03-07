@@ -1,4 +1,4 @@
-﻿namespace SKUApp.Models
+﻿namespace Models.Domain
 {
     public class SKU
     {

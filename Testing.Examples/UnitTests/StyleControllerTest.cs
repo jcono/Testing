@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Web.Mvc;
+using Models.Domain;
 using Moq;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using SKUApp.Controllers;
 using SKUApp.Models;
 

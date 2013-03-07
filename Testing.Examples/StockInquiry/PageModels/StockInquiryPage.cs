@@ -1,6 +1,6 @@
 ﻿using Testing.Browser;
 
-namespace Testing.Examples.StockInquiry
+namespace Testing.Examples.StockInquiry.PageModels
 {
     internal class StockInquiryPage : HtmlPage
     {

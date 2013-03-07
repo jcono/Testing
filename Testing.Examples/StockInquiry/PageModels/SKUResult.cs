@@ -1,8 +1,9 @@
 ﻿using Testing.Browser;
+using Models.View.StockInquiry;
 
-namespace Testing.Examples.StockInquiry
+namespace Testing.Examples.StockInquiry.PageModels
 {
-    internal class SKUResult :HtmlFragment
+    internal class SKUResult : HtmlFragment, ISKUResult
     {
         public SKUResult(IHtmlElement element) : base(element)
         {

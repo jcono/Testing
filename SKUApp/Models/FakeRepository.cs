@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Models.Domain;
+using Testing.Data;
 
 namespace SKUApp.Models
 {
@@ -8,16 +10,7 @@ namespace SKUApp.Models
 
         public IEnumerable<SKU> Find(string key)
         {
-            return new[]
-                {
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "White", Size = "Small"},
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "White", Size = "Medium"},
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "White", Size = "Large"},
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "Black", Size = "Small"},
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "Black", Size = "Medium"},
-                    new SKU {StyleCode = "BenShermanShirt", Colour = "Black", Size = "Large"}
-                };
-
+            return BenShermans.Shirt.SKUs;
         }
     }
 }

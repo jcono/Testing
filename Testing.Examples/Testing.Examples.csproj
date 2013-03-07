@@ -41,20 +41,26 @@
     <Compile Include="Google\Test\SearchExampleTest.cs" />
     <Compile Include="Google\Model\Pages\HomePage.cs" />
     <Compile Include="Google\Model\Fragments\SearchResult.cs" />
-    <Compile Include="StockInquiry\BenSherman.cs" />
-    <Compile Include="StockInquiry\SKUResult.cs" />
-    <Compile Include="StockInquiry\StockInquiryResultsPage.cs" />
+    <Compile Include="StockInquiry\PageModels\SKUResult.cs" />
+    <Compile Include="StockInquiry\PageModels\StockInquiryResultsPage.cs" />
     <Compile Include="StockInquiry\StockInquiryTests.cs" />
-    <Compile Include="StockInquiry\SKUQueryContext.cs" />
-    <Compile Include="StockInquiry\StockInquiryPage.cs" />
-    <Compile Include="StockInquiry\Style.cs" />
+    <Compile Include="StockInquiry\StockInquiryTestContext.cs" />
+    <Compile Include="StockInquiry\PageModels\StockInquiryPage.cs" />
     <Compile Include="UnitTests\RepositoryTest.cs" />
     <Compile Include="UnitTests\StyleControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain\Models.csproj">
+      <Project>{44bcee67-6db9-4cc8-bd0e-ce2e0e17548b}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SKUApp\SKUApp.csproj">
       <Project>{C90B6486-02BC-4C75-BD2E-749AED2C05F9}</Project>
       <Name>SKUApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Testing.Data\Testing.Data.csproj">
+      <Project>{12da26d0-f000-44fe-8c9a-cc1a03cf489a}</Project>
+      <Name>Testing.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Testing\Testing.csproj">
       <Project>{DAD0A65F-1E1B-4186-B518-2929FD354C0D}</Project>

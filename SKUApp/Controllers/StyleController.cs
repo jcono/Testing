@@ -1,5 +1,5 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Models.Domain;
 using SKUApp.Models;
 
 namespace SKUApp.Controllers
@@ -8,9 +8,8 @@ namespace SKUApp.Controllers
     {
         private readonly IRepository<SKU> _repository;
 
-        public StyleController():this(new FakeRepository())
+        public StyleController() : this(new FakeRepository())
         {
-            
         }
 
         public StyleController(IRepository<SKU> repository)
