@@ -12,6 +12,7 @@ namespace SKUApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("Content/*");
 
             routes.MapRoute(
                 name: "Default",

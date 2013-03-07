@@ -1,0 +1,29 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>title</title>
+    </head>
+    <body>
+        <ul id="results">
+        
+            @{
+                foreach (var result in Model)
+                {
+                    <li class="result">
+                        <span class="itemcolour">@result.Colour</span>
+                        <span class="itemsize">@result.Size</span>
+                        <span class="itemcode">@result.StyleCode</span>
+                    </li>
+                }
+            }
+             
+        </ul>
+    </body>
+</html>

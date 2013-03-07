@@ -9,6 +9,8 @@ namespace Testing.Examples.StockInquiry
         public void SimpleSKUQuery()
         {
             Given(I.KnowThatSKUExistsFor(BenSherman.EntireRange)).And(I.AmReadyToMakeAStockInquiry);
+            When(I.SearchFor(BenSherman.Shirt));
+            Then(I.ShouldSee(BenSherman.Shirt.SKUs));
         }
     }
 }
