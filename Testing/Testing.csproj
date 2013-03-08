@@ -37,6 +37,7 @@
     <Compile Include="Browser\BrowserFactory.cs" />
     <Compile Include="Browser\BrowserTest.cs" />
     <Compile Include="Browser\BrowserTestContext.cs" />
+    <Compile Include="Browser\TypeOfBrowser.cs" />
     <Compile Include="Browser\PageModel\HtmlFragment.cs" />
     <Compile Include="Browser\PageModel\HtmlModel.cs" />
     <Compile Include="Browser\PageModel\HtmlPage.cs" />
@@ -52,6 +53,15 @@
   <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorHosting">
+      <HintPath>..\packages\SimpleBrowser.0.5.11\lib\net40\RazorHosting.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleBrowser">
+      <HintPath>..\packages\SimpleBrowser.0.5.11\lib\net40\SimpleBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleBrowser.WebDriver">
+      <HintPath>..\packages\SimpleBrowser.WebDriver.0.5.12\lib\net40\SimpleBrowser.WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="WebDriver">

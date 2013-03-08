@@ -3,16 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using SimpleBrowser.WebDriver;
+using Testing.Browser.PageModel;
 
 namespace Testing.Browser.WebDriver
 {
     public class WebDriverBrowser : IBrowser
     {
+        private static readonly Dictionary<TypeOfBrowser, Func<IWebDriver>> BrowserOptions = new Dictionary<TypeOfBrowser, Func<IWebDriver>>
+        {
+            { TypeOfBrowser.Headless, () => new SimpleBrowserDriver() },
+            { TypeOfBrowser.Firefox, () => new FirefoxDriver() }
+        };
+
         private readonly IWebDriver _driver;
 
-        public WebDriverBrowser()
+        public WebDriverBrowser(TypeOfBrowser typeOfBrowser)
         {
-            _driver = new FirefoxDriver();
+            _driver = BrowserOptions[typeOfBrowser]();
         }
 
         public void Quit()

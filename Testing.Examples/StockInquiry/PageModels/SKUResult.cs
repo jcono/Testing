@@ -1,5 +1,6 @@
 ﻿using Testing.Browser;
 using Models.View.StockInquiry;
+using Testing.Browser.PageModel;
 
 namespace Testing.Examples.StockInquiry.PageModels
 {

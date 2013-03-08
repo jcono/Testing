@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Testing.Browser;
+using Testing.Browser.PageModel;
 using Testing.Examples.Google.Model.Fragments;
 
 namespace Testing.Examples.Google.Model.Pages

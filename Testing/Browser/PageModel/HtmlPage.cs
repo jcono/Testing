@@ -1,14 +1,12 @@
-﻿using Testing.Browser.PageModel;
-
-namespace Testing.Browser
+﻿namespace Testing.Browser.PageModel
 {
     public abstract class HtmlPage : HtmlModel
     {
         private IBrowser _browser;
 
-        protected override IHtmlElement RootElement
+        protected override IHtmlElement ContainerElement
         {
-            get { return _browser.GetElement("html"); }
+            get { return _browser.GetElement("body"); }
         }
 
         public HtmlPage OnBrowser(IBrowser browser)

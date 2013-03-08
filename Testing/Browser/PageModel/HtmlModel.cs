@@ -4,21 +4,21 @@ namespace Testing.Browser.PageModel
 {
     public abstract class HtmlModel
     {
-        protected abstract IHtmlElement RootElement { get; }
+        protected abstract IHtmlElement ContainerElement { get; }
 
         public bool IsShown()
         {
-            return RootElement.Exists && RootElement.Visible;
+            return ContainerElement.Exists && ContainerElement.Visible;
         }
 
         protected IHtmlElement Child(string cssSelector)
         {
-            return RootElement.GetElement(cssSelector);
+            return ContainerElement.GetElement(cssSelector);
         }
 
         protected IEnumerable<IHtmlElement> Children(string cssSelector)
         {
-            return RootElement.GetElements(cssSelector);
+            return ContainerElement.GetElements(cssSelector);
         }
     }
 }

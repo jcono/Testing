@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using OpenQA.Selenium;
+using Testing.Browser.PageModel;
 
 namespace Testing.Browser.WebDriver
 {

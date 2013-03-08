@@ -19,7 +19,7 @@ namespace Testing.Browser
                 _webDriverBrowser.Quit();
             }
 
-            _webDriverBrowser = new WebDriverBrowser();
+            _webDriverBrowser = new WebDriverBrowser(TypeOfBrowser.Firefox);
             return _webDriverBrowser;
         }
     }

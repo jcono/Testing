@@ -1,19 +1,17 @@
-﻿using Testing.Browser.PageModel;
-
-namespace Testing.Browser
+﻿namespace Testing.Browser.PageModel
 {
     public abstract class HtmlFragment : HtmlModel
     {
-        private readonly IHtmlElement _rootElement;
+        private readonly IHtmlElement _containerElement;
 
         protected HtmlFragment(IHtmlElement element)
         {
-            _rootElement = element;
+            _containerElement = element;
         }
 
-        protected override IHtmlElement RootElement
+        protected override IHtmlElement ContainerElement
         {
-            get { return _rootElement; }
+            get { return _containerElement; }
         }
     }
 }

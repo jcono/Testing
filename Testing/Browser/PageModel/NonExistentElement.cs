@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Testing.Browser
+namespace Testing.Browser.PageModel
 {
     public class NonExistentElement : IHtmlElement
     {

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Testing.Browser.PageModel;
 
 namespace Testing.Browser
 {

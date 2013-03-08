@@ -2,6 +2,7 @@
 using System.Linq;
 using Models.Domain;
 using Testing.Browser;
+using Testing.Browser.PageModel;
 
 namespace Testing.Examples.StockInquiry.PageModels
 {

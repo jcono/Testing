@@ -1,4 +1,5 @@
 ﻿using Testing.Browser;
+using Testing.Browser.PageModel;
 
 namespace Testing.Examples.StockInquiry.PageModels
 {

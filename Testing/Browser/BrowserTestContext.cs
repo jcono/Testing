@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Testing.BDD;
+using Testing.Browser.PageModel;
 
 namespace Testing.Browser
 {
