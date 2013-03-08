@@ -29,7 +29,7 @@ namespace Testing.Examples.StockInquiry.PageModels
             get { return Items.Count(); }
         }
 
-        public SKUResult ResultFor(SKU sku)
+        public SKUResult For(SKU sku)
         {
             return Items.FirstOrDefault(x => x.Colour == sku.Colour &&
                                              x.Size == sku.Size &&

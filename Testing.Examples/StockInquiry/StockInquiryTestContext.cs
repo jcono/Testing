@@ -42,10 +42,6 @@ namespace Testing.Examples.StockInquiry
                 {
                     Assert.That(On<StockInquiryResultsPage>().Results.For(result).IsShown());
                 }
-
-                Assert.That(expectedResults.All(x => results.Items.Any(result => x.Colour == result.Colour &&
-                                                                           x.Size == result.Size &&
-                                                                           x.Style.Code == result.StyleCode)));
             };
         }
 
