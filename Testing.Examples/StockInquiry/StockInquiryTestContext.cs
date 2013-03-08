@@ -10,7 +10,7 @@ namespace Testing.Examples.StockInquiry
 {
     internal class StockInquiryTestContext : BrowserTestContext
     {
-        public Action KnowThatSKUExistsFor(IEnumerable<Style> entireRange)
+        public Action KnowThatSKUExistsFor(IEnumerable<SKU> range)
         {
             return () =>
             {
@@ -27,8 +27,7 @@ namespace Testing.Examples.StockInquiry
         {
             return () =>
             {
-                On<StockInquiryPage>().SearchFor(shirt.StyleCode);
-
+                On<StockInquiryPage>().SearchFor(shirt.Code);
                 Wait.For(() => On<StockInquiryResultsPage>().IsReady(), "Results never came back");
             };
         }
@@ -37,14 +36,30 @@ namespace Testing.Examples.StockInquiry
         {
             return () =>
             {
-                var skuResults = On<StockInquiryResultsPage>().Results;
-                Assert.That(skuResults, Is.Not.Empty);
-                Assert.That(skuResults.Count(), Is.EqualTo(expectedResults.Count()));
+                var results = On<StockInquiryResultsPage>().Results;
+                Assert.That(results.Count, Is.EqualTo(expectedResults.Count()));
+                foreach (var result in expectedResults)
+                {
+                    Assert.That(On<StockInquiryResultsPage>().Results.For(result).IsShown());
+                }
 
-                Assert.That(expectedResults.All(x => skuResults.Any(result => x.Colour == result.Colour &&
-                                                                              x.Size == result.Size &&
-                                                                              x.StyleCode == result.StyleCode)));
+                Assert.That(expectedResults.All(x => results.Items.Any(result => x.Colour == result.Colour &&
+                                                                           x.Size == result.Size &&
+                                                                           x.Style.Code == result.StyleCode)));
             };
+        }
+
+        public Action ChooseToLookForStockFor(SKU sku)
+        {
+            return () =>
+            {
+                //                On<StockInquiryResultsPage>().For(sku).View();
+            };
+        }
+
+        public Action ShouldSeeTheOptionsFor(IEnumerable<Stock> stocks)
+        {
+            throw new NotImplementedException();
         }
     }
 }

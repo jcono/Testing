@@ -1,10 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace Models.Domain
+﻿namespace Models.Domain
 {
     public class Style
     {
-        public IEnumerable<SKU> SKUs;
-        public string StyleCode { get; set; }
+        public string Code { get; set; }
     }
 }

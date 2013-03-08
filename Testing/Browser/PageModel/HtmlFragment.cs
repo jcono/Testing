@@ -1,4 +1,6 @@
-﻿namespace Testing.Browser
+﻿using Testing.Browser.PageModel;
+
+namespace Testing.Browser
 {
     public abstract class HtmlFragment : HtmlModel
     {

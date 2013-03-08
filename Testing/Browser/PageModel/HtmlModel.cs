@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Testing.Browser
+namespace Testing.Browser.PageModel
 {
     public abstract class HtmlModel
     {

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Models.Domain;
 using Testing.Browser;
 
 namespace Testing.Examples.StockInquiry.PageModels
@@ -8,11 +9,34 @@ namespace Testing.Examples.StockInquiry.PageModels
     {
         public bool IsReady()
         {
-            var results = Child("#results");
-            return results.Exists && results.Visible;
+            return Results.IsShown();
         }
 
-        public IEnumerable<SKUResult> Results
+        public StockInquiryResults Results
+        {
+            get { return new StockInquiryResults(Child("#results")); }
+        }
+    }
+
+    internal class StockInquiryResults : HtmlFragment
+    {
+        public StockInquiryResults(IHtmlElement element) : base(element)
+        {
+        }
+
+        public int Count
+        {
+            get { return Items.Count(); }
+        }
+
+        public SKUResult ResultFor(SKU sku)
+        {
+            return Items.FirstOrDefault(x => x.Colour == sku.Colour &&
+                                             x.Size == sku.Size &&
+                                             x.StyleCode == sku.Style.Code);
+        }
+
+        private IEnumerable<SKUResult> Items
         {
             get { return Children(".result").Select(x => new SKUResult(x)); }
         }

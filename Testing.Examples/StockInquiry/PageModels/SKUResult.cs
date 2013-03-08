@@ -23,5 +23,10 @@ namespace Testing.Examples.StockInquiry.PageModels
         {
             get { return Child(".itemcode").Text; }
         }
+
+        public void View()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

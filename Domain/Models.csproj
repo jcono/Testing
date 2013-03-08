@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\SKU.cs" />
+    <Compile Include="Domain\Stock.cs" />
     <Compile Include="Domain\Style.cs" />
     <Compile Include="View\StockInquiry\ISKUResult.cs" />
   </ItemGroup>

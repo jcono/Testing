@@ -2,7 +2,7 @@
 {
     public class SKU
     {
-        public string StyleCode { get; set; }
+        public Style Style { get; set; }
 
         public string Colour { get; set; }
 
