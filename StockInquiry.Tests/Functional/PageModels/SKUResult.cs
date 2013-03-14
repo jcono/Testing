@@ -1,5 +1,4 @@
-﻿using System;
-using StockInquiry.Models.View;
+﻿using StockInquiry.Models.View;
 using Testing.Framework.Browser.PageModel;
 
 namespace StockInquiry.Tests.Functional.PageModels

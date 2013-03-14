@@ -11,22 +11,22 @@ namespace StockInquiry.Tests.Functional.PageModels
         {
         }
 
-        public int Count
+        public dynamic Count
         {
             get { return Items.Count(); }
         }
 
-        public SKUResult For(SKU sku)
+        protected IEnumerable<StockInquiryResult> Items
         {
-            var matchingItem = Items.FirstOrDefault(x => x.Colour == sku.Colour &&
-                                                         x.Size == sku.Size &&
-                                                         x.StyleCode == sku.Style.Code);
-            return matchingItem ?? new SKUResult(new NonExistentElement(""));
+            get { return Children(".result").Select(x => new StockInquiryResult(x)); }
         }
 
-        private IEnumerable<SKUResult> Items
+        public StockInquiryResult For(Stock stock)
         {
-            get { return Children(".result").Select(x => new SKUResult(x)); }
+            var matchingItem = Items.SingleOrDefault(x => x.Location == stock.Location &&
+                                                         x.Quantity == stock.Quantity &&
+                                                         x.SKUId == stock.SKU.Id);
+            return matchingItem ?? new StockInquiryResult(new NonExistentElement(""));
         }
     }
 }

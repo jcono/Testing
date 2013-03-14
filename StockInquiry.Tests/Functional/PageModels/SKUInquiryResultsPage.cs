@@ -9,9 +9,9 @@ namespace StockInquiry.Tests.Functional.PageModels
             return Results.IsShown();
         }
 
-        public StockInquiryResults Results
+        public SKUInquiryResults Results
         {
-            get { return new StockInquiryResults(Child("#results")); }
+            get { return new SKUInquiryResults(Child("#results")); }
         }
     }
 }

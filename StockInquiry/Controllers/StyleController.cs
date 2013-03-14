@@ -8,7 +8,7 @@ namespace StockInquiry.Controllers
     {
         private readonly IRepository<SKU> _repository;
 
-        public StyleController() : this(new FakeRepository())
+        public StyleController() : this(new FakeSKURepository())
         {
         }
 
@@ -20,8 +20,7 @@ namespace StockInquiry.Controllers
         [HttpPost]
         public ViewResult Find(string stylecode)
         {
-            var model = _repository.Find(stylecode);
-            return View(model);
+            return View(_repository.Find(stylecode));
         }
     }
 }

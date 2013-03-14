@@ -10,7 +10,9 @@ namespace StockInquiry.Tests.Functional
 {
     internal class StockInquiryTestContext : BrowserTestContext
     {
-        public Action KnowThatSKUExistsFor(IEnumerable<SKU> range)
+        private const string AppUrl = "http://localhost:22782/";
+
+        public Action KnowThatStockExistsFor(IEnumerable<SKU> range)
         {
             return () =>
             {
@@ -19,7 +21,7 @@ namespace StockInquiry.Tests.Functional
 
         public void AmReadyToMakeAStockInquiry()
         {
-            Launch("http://localhost:22782/");
+            Launch(AppUrl);
             Wait.For(() => On<StockInquiryPage>().IsReady(), "Stock inquiry page never appeared");
         }
 
@@ -32,7 +34,7 @@ namespace StockInquiry.Tests.Functional
             };
         }
 
-        public Action ShouldSee(IEnumerable<SKU> expectedResults)
+        public Action ShouldSeeTheProductsFor(IEnumerable<SKU> expectedResults)
         {
             return () =>
             {
@@ -54,9 +56,17 @@ namespace StockInquiry.Tests.Functional
             };
         }
 
-        public Action ShouldSeeThe(IEnumerable<Stock> stocks)
+        public Action ShouldSeeThe(IEnumerable<Stock> expectedResults)
         {
-            throw new NotImplementedException();
+            return () =>
+            {
+                var results = On<StockInquiryResultsPage>().Results;
+                Assert.That(results.Count, Is.EqualTo(expectedResults.Count()));
+                foreach (var result in expectedResults)
+                {
+                    Assert.That(On<StockInquiryResultsPage>().Results.For(result).IsShown());
+                }
+            };
         }
     }
 }

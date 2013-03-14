@@ -6,8 +6,12 @@ namespace StockInquiry.Tests.Functional.PageModels
     {
         public bool IsReady()
         {
-            var results = Child("#stockresults");
-            return results.Exists && results.Visible;
+            return Results.IsShown();
+        }
+
+        public StockInquiryResults Results
+        {
+            get { return new StockInquiryResults(Child("#stockresults")); }
         }
     }
 }

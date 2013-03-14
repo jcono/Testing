@@ -12,12 +12,14 @@ namespace StockInquiry.Tests.Unit
         [Test]
         public void ShouldReturnAViewWithSKUResults()
         {
+            const string STYLECODE = "bsshirt";
+
             var expectedModel = new List<SKU> { new SKU() };
             var moq = new Mock<IRepository<SKU>>();
-            moq.Setup(x => x.Find("bsshirt")).Returns(expectedModel);
+            moq.Setup(x => x.Find(STYLECODE)).Returns(expectedModel);
             var styleController = new StyleController(moq.Object);
 
-            var result = styleController.Find("bsshirt");
+            var result = styleController.Find(STYLECODE);
 
             Assert.That(result.Model, Is.EqualTo(expectedModel));
         }

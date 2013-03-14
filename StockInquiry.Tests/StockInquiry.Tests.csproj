@@ -38,13 +38,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Functional\PageModels\SKUResult.cs" />
-    <Compile Include="Functional\PageModels\StockInquiryResults.cs" />
+    <Compile Include="Functional\PageModels\StockInquiryResult.cs" />
+    <Compile Include="Functional\PageModels\SKUInquiryResults.cs" />
     <Compile Include="Functional\PageModels\SKUInquiryResultsPage.cs" />
+    <Compile Include="Functional\PageModels\StockInquiryResults.cs" />
     <Compile Include="Functional\PageModels\StockInquiryResultsPage.cs" />
     <Compile Include="Functional\StockInquiryTests.cs" />
     <Compile Include="Functional\StockInquiryTestContext.cs" />
     <Compile Include="Functional\PageModels\StockInquiryPage.cs" />
     <Compile Include="Unit\RepositoryTest.cs" />
+    <Compile Include="Unit\StockControllerTests.cs" />
     <Compile Include="Unit\StyleControllerTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -66,6 +69,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq">
       <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>

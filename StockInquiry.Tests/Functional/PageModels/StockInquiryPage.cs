@@ -6,17 +6,23 @@ namespace StockInquiry.Tests.Functional.PageModels
     {
         public bool IsReady()
         {
-            var searchBox = Child("input#search");
-            return searchBox.Exists && searchBox.Visible;
+            return SearchBox.Exists && SearchBox.Visible;
         }
 
         public void SearchFor(string styleCode)
         {
-            var searchBox = Child("input#search");
-            searchBox.Type(styleCode);
+            SearchBox.Type(styleCode);
+            SubmitButton.Click();
+        }
 
-            var submitButton = Child("input#submit");
-            submitButton.Click();
+        private IHtmlElement SearchBox
+        {
+            get { return Child("input#search"); }
+        }
+
+        private IHtmlElement SubmitButton
+        {
+            get { return Child("input#submit"); }
         }
     }
 }

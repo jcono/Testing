@@ -4,9 +4,9 @@ using StockInquiry.Tests.Data;
 
 namespace StockInquiry.Models
 {
-    public class FakeRepository : IRepository<SKU>
+    public class FakeSKURepository : IRepository<SKU>
     {
-        public IEnumerable<SKU> Find(string key)
+        public IEnumerable<SKU> Find(string styleCode)
         {
             return BenShermans.Shirts.All;
         }

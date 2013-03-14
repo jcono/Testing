@@ -1,25 +1,13 @@
 ﻿@model dynamic
 
 @{
-    Layout = null;
+    ViewBag.Title = "Find Stock";
+    Layout = "~/Views/Site/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
 
-<html>
-    <head>
-        <title>title</title>
-        <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css"/>
-        <script src="~/Content/jquery-1.9.1.min.js"> </script>
-        <script src="~/Content/bootstrap/js/bootstrap.js"> </script>
-    </head>
-        
-    <body>
-        @using (Html.BeginForm("Find", "Style"))
-        {
-            <input id="search" name="stylecode" class="text-left"/>
-            <input id="submit" value="Find" type="submit" class="btn btn-primary"/>
-        }
-
-    </body>
-</html>
+@using (Html.BeginForm("Find", "Style"))
+{
+    <input id="search" name="stylecode" class="text-left"/>
+    <input id="submit" value="Find" type="submit" class="btn btn-primary"/>
+}
