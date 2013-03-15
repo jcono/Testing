@@ -4,15 +4,11 @@ using StockInquiry.Models.Domain;
 
 namespace StockInquiry.Controllers
 {
-    public class StyleController : Controller
+    public class SKUController : Controller
     {
         private readonly IRepository<SKU> _repository;
 
-        public StyleController() : this(new FakeSKURepository())
-        {
-        }
-
-        public StyleController(IRepository<SKU> repository)
+        public SKUController(IRepository<SKU> repository)
         {
             _repository = repository;
         }

@@ -1,12 +1,10 @@
-﻿@model dynamic
-
-@{
-    ViewBag.Title = "Find Stock";
+﻿@{
+    ViewBag.Title = "Stock Inquiry";
     Layout = "~/Views/Site/_Layout.cshtml";
 }
 
 
-@using (Html.BeginForm("Find", "Style"))
+@using (Html.BeginForm("Find", "SKU"))
 {
     <input id="search" name="stylecode" class="text-left"/>
     <input id="submit" value="Find" type="submit" class="btn btn-primary"/>

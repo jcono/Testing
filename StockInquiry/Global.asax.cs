@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using StockInquiry.App_Start;
+using StockInquiry.DependencyInjection;
 
 namespace StockInquiry
 {
@@ -14,9 +15,18 @@ namespace StockInquiry
         {
             AreaRegistration.RegisterAllAreas();
 
+            ConfigureContollerFactory();
+
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+
+        private static void ConfigureContollerFactory()
+        {
+            var configuration = new UnityConfiguration();
+            var controllerFactory = new UnityControllerFactory(configuration);
+            ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
     }
 }

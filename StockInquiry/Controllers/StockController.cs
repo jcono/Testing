@@ -8,11 +8,6 @@ namespace StockInquiry.Controllers
     {
         private readonly IRepository<Stock> _repository;
 
-        public StockController() : this(new FakeStockRepository())
-        {
-            
-        }
-
         public StockController(IRepository<Stock> repository)
         {
             _repository = repository;

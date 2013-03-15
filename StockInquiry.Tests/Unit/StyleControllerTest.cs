@@ -17,7 +17,7 @@ namespace StockInquiry.Tests.Unit
             var expectedModel = new List<SKU> { new SKU() };
             var moq = new Mock<IRepository<SKU>>();
             moq.Setup(x => x.Find(STYLECODE)).Returns(expectedModel);
-            var styleController = new StyleController(moq.Object);
+            var styleController = new SKUController(moq.Object);
 
             var result = styleController.Find(STYLECODE);
 
