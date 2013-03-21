@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using StockInquiry.Models.Domain;
 using StockInquiry.Tests.Data;
 
@@ -8,7 +9,7 @@ namespace StockInquiry.Models
     {
         public IEnumerable<SKU> Find(string styleCode)
         {
-            return BenShermans.Shirts.All;
+            return BenSherman.EntireRange.Where(x => x.Style.Code == styleCode);
         }
     }
 }

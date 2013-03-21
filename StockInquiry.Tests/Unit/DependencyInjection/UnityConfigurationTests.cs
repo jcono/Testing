@@ -3,6 +3,8 @@ using System.Web.Mvc;
 using Microsoft.Practices.Unity;
 using NUnit.Framework;
 using StockInquiry.DependencyInjection;
+using StockInquiry.Models;
+using StockInquiry.Models.Domain;
 
 namespace StockInquiry.Tests.Unit.DependencyInjection
 {
@@ -21,6 +23,18 @@ namespace StockInquiry.Tests.Unit.DependencyInjection
             {
                 Assert.That(configuration.Resolve(controllerType), Is.TypeOf(controllerType));
             }
+        }
+
+        [Test, Ignore]
+        public void ShouldResolveTheSimulators()
+        {
+            var configuration = new UnityConfiguration();
+
+            var repository = configuration.Resolve<IRepository<SKU>>();
+
+            Assert.That(repository, Is.TypeOf<SimulatedSKURepository>());
+//            var simulated = (SimulatedSKURepository)repository;
+//            Assert.That(simulated._repository, Is.TypeOf<FakeSKURepository>());
         }
     }
 }

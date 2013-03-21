@@ -5,9 +5,9 @@ using StockInquiry.Controllers;
 using StockInquiry.Models;
 using StockInquiry.Models.Domain;
 
-namespace StockInquiry.Tests.Unit
+namespace StockInquiry.Tests.Unit.Controllers
 {
-    public class StyleControllerTest
+    public class SKUControllerTest
     {
         [Test]
         public void ShouldReturnAViewWithSKUResults()

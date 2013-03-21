@@ -43,12 +43,20 @@
     <Compile Include="Functional\PageModels\SKUInquiryResultsPage.cs" />
     <Compile Include="Functional\PageModels\StockInquiryResults.cs" />
     <Compile Include="Functional\PageModels\StockInquiryResultsPage.cs" />
+    <Compile Include="Functional\StepDefinitions.cs" />
+    <Compile Include="Functional\StockInquiry.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockInquiry.feature</DependentUpon>
+    </Compile>
     <Compile Include="Functional\StockInquiryTests.cs" />
     <Compile Include="Functional\StockInquiryTestContext.cs" />
     <Compile Include="Functional\PageModels\StockInquiryPage.cs" />
+    <Compile Include="Unit\Repositories\FakeSKURepositoryTests.cs" />
     <Compile Include="Unit\DependencyInjection\UnityConfigurationTests.cs" />
-    <Compile Include="Unit\StockControllerTests.cs" />
-    <Compile Include="Unit\StyleControllerTest.cs" />
+    <Compile Include="Unit\Controllers\StockControllerTests.cs" />
+    <Compile Include="Unit\Controllers\SKUControllerTest.cs" />
+    <Compile Include="Unit\Repositories\FakeStockRepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StockInquiry.Models\StockInquiry.Models.csproj">
@@ -83,9 +91,16 @@
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Functional\StockInquiry.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>StockInquiry.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

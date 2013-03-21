@@ -8,7 +8,7 @@ namespace StockInquiry.Models
     {
         public IEnumerable<Stock> Find(string skuId)
         {
-            return BenShermans.MediumBlackShirtStock;
+            return BenSherman.StockOf.Shirts.MediumBlackShirts;
         }
     }
 }

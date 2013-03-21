@@ -93,6 +93,10 @@
     <Compile Include="Models\FakeSKURepository.cs" />
     <Compile Include="Models\FakeStockRepository.cs" />
     <Compile Include="Models\IRepository.cs" />
+    <Compile Include="Models\ISimulatorDecider.cs" />
+    <Compile Include="Models\SimulatedSKURepository.cs" />
+    <Compile Include="Models\SimulatorDecider.cs" />
+    <Compile Include="Models\SimulatorKey.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +149,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Site\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Simulators\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Simulators\Toggle.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

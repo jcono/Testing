@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Web.Mvc;
 using Microsoft.Practices.Unity;
@@ -11,8 +12,11 @@ namespace StockInquiry.DependencyInjection
         public UnityConfiguration()
         {
             var unityConfiguration = this;
-            unityConfiguration.RegisterType<IRepository<SKU>, FakeSKURepository>();
+//            unityConfiguration.RegisterType<IRepository<SKU>, FakeSKURepository>();
             unityConfiguration.RegisterType<IRepository<Stock>, FakeStockRepository>();
+
+            unityConfiguration.RegisterType<ISimulatorDecider, SimulatorDecider>();
+            unityConfiguration.RegisterType<IRepository<SKU>, SimulatedSKURepository>();
 
             RegisterControllers(this);
         }

@@ -11,13 +11,13 @@ namespace StockInquiry.Tests.Functional
         {
             Scenario("Simple stock inquiry", () =>
             {
-                Given(I.KnowThatStockExistsFor(BenShermans.EntireRange));
+                Given(I.KnowThatStockExistsFor(BenSherman.EntireRange));
                 And(I.AmReadyToMakeAStockInquiry);
-                When(I.SearchFor(BenShermans.Shirts.Style));
-                Then(I.ShouldSeeTheProductsFor(BenShermans.Shirts.All));
+                When(I.SearchFor(BenSherman.Shirt.Style));
+                Then(I.ShouldSeeTheProductsFor(BenSherman.Shirt.All));
 
-                When(I.ChooseToLookForStockFor(BenShermans.Shirts.InMediumBlack));
-                Then(I.ShouldSeeThe(BenShermans.MediumBlackShirtStock));
+                When(I.ChooseToLookForStockFor(BenSherman.Shirt.InMediumBlack));
+                Then(I.ShouldSeeThe(BenSherman.StockOf.Shirts.MediumBlackShirts));
             });
         }
     }

@@ -38,7 +38,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BenShermans.cs" />
+    <Compile Include="BenSherman.cs" />
+    <Compile Include="Colour.cs" />
+    <Compile Include="Locations.cs" />
+    <Compile Include="Stock.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StockInquiry.Models\StockInquiry.Models.csproj">
