@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using StockInquiry.App_Start;
 using StockInquiry.DependencyInjection;
+using StockInquiry.DependencyInjection.Windsor;
 
 namespace StockInquiry
 {
@@ -24,8 +25,9 @@ namespace StockInquiry
 
         private static void ConfigureContollerFactory()
         {
-            var configuration = new UnityConfiguration();
-            var controllerFactory = new UnityControllerFactory(configuration);
+        
+            var configuration = new WindsorConfiguredContainer();
+            var controllerFactory = new ConfiguredControllerFactory(configuration);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }
     }

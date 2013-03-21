@@ -16,12 +16,12 @@ namespace Testing.Framework.Browser
             Browser = BrowserFactory.ForWebDriver();
         }
 
-        protected void Launch(string address)
+        public void Launch(string address)
         {
             Browser.GoTo(address);
         }
 
-        protected T On<T>() where T : HtmlPage, new()
+        public T On<T>() where T : HtmlPage, new()
         {
             var type = typeof(T);
             if (!PagesCache.ContainsKey(type))

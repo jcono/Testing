@@ -11,7 +11,7 @@ namespace StockInquiry.Tests.Unit.Repositories
         {
             var repository = new FakeSKURepository();
 
-            var skus = repository.Find(BenSherman.Shirt.Style.Code);
+            var skus = repository.Find(Styles.BenShermanShirt.Code);
 
             Assert.That(skus, Is.EqualTo(BenSherman.Shirt.All));
         }

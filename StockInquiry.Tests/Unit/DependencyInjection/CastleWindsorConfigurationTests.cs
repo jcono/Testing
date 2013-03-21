@@ -1,14 +1,14 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
-using Microsoft.Practices.Unity;
 using NUnit.Framework;
 using StockInquiry.DependencyInjection;
+using StockInquiry.DependencyInjection.Windsor;
 using StockInquiry.Models;
 using StockInquiry.Models.Domain;
 
 namespace StockInquiry.Tests.Unit.DependencyInjection
 {
-    public class UnityConfigurationTests
+    public class CastleWindsorConfigurationTests
     {
         [Test]
         public void ShouldBeAbleToResolveAllControllers()
@@ -17,7 +17,7 @@ namespace StockInquiry.Tests.Unit.DependencyInjection
             var allTypes = assemblies.GetTypes();
             var controllerTypes = allTypes.Where(x => typeof(IController).IsAssignableFrom(x));
 
-            var configuration = new UnityConfiguration();
+            var configuration = new WindsorConfiguredContainer();
 
             foreach (var controllerType in controllerTypes)
             {
@@ -25,16 +25,14 @@ namespace StockInquiry.Tests.Unit.DependencyInjection
             }
         }
 
-        [Test, Ignore]
+        [Test]
         public void ShouldResolveTheSimulators()
         {
-            var configuration = new UnityConfiguration();
+            var configuration = new WindsorConfiguredContainer();
 
-            var repository = configuration.Resolve<IRepository<SKU>>();
+            var repository = configuration.Resolve(typeof(IRepository<SKU>));
 
             Assert.That(repository, Is.TypeOf<SimulatedSKURepository>());
-//            var simulated = (SimulatedSKURepository)repository;
-//            Assert.That(simulated._repository, Is.TypeOf<FakeSKURepository>());
         }
     }
 }

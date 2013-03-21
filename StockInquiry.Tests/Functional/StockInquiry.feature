@@ -8,7 +8,7 @@ Background:
 	And I want to make a stock inquiry
 
 Scenario: Simple stock inquiry
-	When I search for a "Ben Sherman Shirt"
+	When I search for the style "Ben Sherman Shirt"
 	Then I should see the SKU's for "All Ben Sherman's Shirts"
 
 	When I choose to look at stock for a "Ben Sherman Shirt In Medium Black"

@@ -43,7 +43,7 @@
     <Compile Include="Functional\PageModels\SKUInquiryResultsPage.cs" />
     <Compile Include="Functional\PageModels\StockInquiryResults.cs" />
     <Compile Include="Functional\PageModels\StockInquiryResultsPage.cs" />
-    <Compile Include="Functional\StepDefinitions.cs" />
+    <Compile Include="Functional\StockInquirySteps.cs" />
     <Compile Include="Functional\StockInquiry.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -52,8 +52,8 @@
     <Compile Include="Functional\StockInquiryTests.cs" />
     <Compile Include="Functional\StockInquiryTestContext.cs" />
     <Compile Include="Functional\PageModels\StockInquiryPage.cs" />
+    <Compile Include="Unit\DependencyInjection\CastleWindsorConfigurationTests.cs" />
     <Compile Include="Unit\Repositories\FakeSKURepositoryTests.cs" />
-    <Compile Include="Unit\DependencyInjection\UnityConfigurationTests.cs" />
     <Compile Include="Unit\Controllers\StockControllerTests.cs" />
     <Compile Include="Unit\Controllers\SKUControllerTest.cs" />
     <Compile Include="Unit\Repositories\FakeStockRepositoryTests.cs" />
@@ -77,6 +77,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Castle.Windsor.3.2.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Practices.Unity, Version=2.1.505.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -91,6 +98,7 @@
     <Reference Include="System" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
     <Reference Include="TechTalk.SpecFlow">
       <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
     </Reference>

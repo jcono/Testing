@@ -13,7 +13,7 @@ namespace StockInquiry.Tests.Functional
             {
                 Given(I.KnowThatStockExistsFor(BenSherman.EntireRange));
                 And(I.AmReadyToMakeAStockInquiry);
-                When(I.SearchFor(BenSherman.Shirt.Style));
+                When(I.SearchFor(Styles.BenShermanShirt));
                 Then(I.ShouldSeeTheProductsFor(BenSherman.Shirt.All));
 
                 When(I.ChooseToLookForStockFor(BenSherman.Shirt.InMediumBlack));

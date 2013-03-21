@@ -8,9 +8,9 @@ namespace StockInquiry.Models
         public readonly IRepository<SKU> _repository;
         private readonly ISimulatorDecider _simulatorDecider;
 
-        public SimulatedSKURepository(ISimulatorDecider simulatorDecider)
+        public SimulatedSKURepository(ISimulatorDecider simulatorDecider, IRepository<SKU> repository)
         {
-            _repository = new FakeSKURepository();
+            _repository = repository;
             _simulatorDecider = simulatorDecider;
         }
 
