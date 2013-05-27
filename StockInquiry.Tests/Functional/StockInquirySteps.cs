@@ -1,9 +1,7 @@
 ﻿using StockInquiry.Tests.Data;
 using StockInquiry.Tests.Functional.PageModels;
 using TechTalk.SpecFlow;
-using Testing.Framework.BDD;
 using Testing.Framework.Browser;
-using Testing.Framework.Browser.PageModel;
 
 namespace StockInquiry.Tests.Functional
 {
@@ -31,7 +29,6 @@ namespace StockInquiry.Tests.Functional
         [When(@"I search for the style ""(.*)""")]
         public void WhenISearchForTheStyle(string styleDescription)
         {
-
             On<StockInquiryPage>().SearchFor(Styles.FindCodeFor(styleDescription));
             Wait.For(() => On<SKUInquiryResultsPage>().IsReady(), "Results never came back");
         }
@@ -49,34 +46,6 @@ namespace StockInquiry.Tests.Functional
         [Then(@"I should see all the ""(.*)"" stock")]
         public void ThenIShouldSeeAllTheStock(string p0)
         {
-        }
-    }
-
-    public class BrowserSteps
-    {
-        private readonly BrowserTestContext _context;
-
-        protected BrowserSteps(BrowserTestContext context)
-        {
-            _context = context;
-        }
-
-        protected void Launch(string address)
-        {
-            _context.Launch(address);
-        }
-
-        protected T On<T>() where T : HtmlPage, new()
-        {
-            return _context.On<T>();
-        }
-    }
-
-    public class StockInquiryTest : BrowserTestContext
-    {
-        public StockInquiryTest()
-        {
-            Reset();
         }
     }
 }

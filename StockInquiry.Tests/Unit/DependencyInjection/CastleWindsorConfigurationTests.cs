@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Web.Mvc;
 using NUnit.Framework;
-using StockInquiry.DependencyInjection;
 using StockInquiry.DependencyInjection.Windsor;
 using StockInquiry.Models;
 using StockInquiry.Models.Domain;

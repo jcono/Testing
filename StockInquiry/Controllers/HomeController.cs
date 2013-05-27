@@ -28,12 +28,8 @@ namespace StockInquiry.Controllers
 
         public ActionResult Index()
         {
-            var dictionary = new Dictionary<SimulatorKey, bool>();
             var simulatorKeys = Enum.GetValues(typeof(SimulatorKey)).Cast<SimulatorKey>();
-            foreach (var key in simulatorKeys)
-            {
-                dictionary.Add(key, _simulatorDecider.ShouldSimulate(key));
-            }
+            var dictionary = simulatorKeys.ToDictionary(key => key, key => _simulatorDecider.ShouldSimulate(key));
             return View(dictionary);
         }
 

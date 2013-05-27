@@ -24,8 +24,7 @@ namespace StockInquiry
         }
 
         private static void ConfigureContollerFactory()
-        {
-        
+        {        
             var configuration = new WindsorConfiguredContainer();
             var controllerFactory = new ConfiguredControllerFactory(configuration);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);

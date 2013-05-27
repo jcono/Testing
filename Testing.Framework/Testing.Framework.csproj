@@ -54,12 +54,6 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="RazorHosting">
-      <HintPath>..\packages\SimpleBrowser.0.5.11\lib\net40\RazorHosting.dll</HintPath>
-    </Reference>
-    <Reference Include="SimpleBrowser">
-      <HintPath>..\packages\SimpleBrowser.0.5.11\lib\net40\SimpleBrowser.dll</HintPath>
-    </Reference>
     <Reference Include="SimpleBrowser.WebDriver">
       <HintPath>..\packages\SimpleBrowser.WebDriver.0.5.12\lib\net40\SimpleBrowser.WebDriver.dll</HintPath>
     </Reference>
