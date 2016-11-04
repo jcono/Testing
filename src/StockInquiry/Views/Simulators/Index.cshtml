@@ -1,0 +1,55 @@
+﻿@model Dictionary<StockInquiry.Models.SimulatorKey, bool>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    .header h1
+    {
+    font-family: Tahoma;
+    text-decoration: underline;
+    }
+    .content
+    {
+    font-family: Tahoma;
+    font-variant: normal;
+    font-size: large;
+    font-weight: bold;
+    }
+    .content input
+    {
+    width: 15em;
+    font-family: Tahoma;
+    font-variant: normal;
+    font-size: normal;
+    font-weight: bold;
+    }
+    .content span.real
+    {
+    color: #008800;
+    }
+    .content span.simulated
+    {
+    color: #FF9900;
+    }
+}
+
+<div>
+    <div class="home">
+        <a href="/">Home</a>
+    </div>
+    <div class="header">
+        <h1>Simulator status</h1>
+    </div>
+    <div class="content">
+        @{
+            foreach (var model in Model)
+            {
+                Html.RenderPartial("Toggle", model);
+            }
+        }
+    </div>
+</div>

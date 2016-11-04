@@ -1,22 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing.Framework", "Testing.Framework\Testing.Framework.csproj", "{DAD0A65F-1E1B-4186-B518-2929FD354C0D}"
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "StockInquiry", "src\StockInquiry\StockInquiry.xproj", "{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockInquiry.Tests", "StockInquiry.Tests\StockInquiry.Tests.csproj", "{846154C9-CDEF-4148-9607-1C11C4F5A401}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "StockInquiry.Tests", "tests\StockInquiry.Tests\StockInquiry.Tests.xproj", "{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{99E7C931-BE47-46CC-9515-F6D12CB90190}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A4672BBE-9D46-4CFB-9CBE-DB3D50542A7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7880F9F4-6328-4E12-89CC-FDB6059896FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{63762B8F-F6A7-4F5F-A064-618D51B73B46}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
+		global.json = global.json
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockInquiry", "StockInquiry\StockInquiry.csproj", "{C90B6486-02BC-4C75-BD2E-749AED2C05F9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockInquiry.Tests.Data", "StockInquiry.Tests.Data\StockInquiry.Tests.Data.csproj", "{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockInquiry.Models", "StockInquiry.Models\StockInquiry.Models.csproj", "{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,31 +22,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DAD0A65F-1E1B-4186-B518-2929FD354C0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DAD0A65F-1E1B-4186-B518-2929FD354C0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DAD0A65F-1E1B-4186-B518-2929FD354C0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DAD0A65F-1E1B-4186-B518-2929FD354C0D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{846154C9-CDEF-4148-9607-1C11C4F5A401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{846154C9-CDEF-4148-9607-1C11C4F5A401}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{846154C9-CDEF-4148-9607-1C11C4F5A401}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{846154C9-CDEF-4148-9607-1C11C4F5A401}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C90B6486-02BC-4C75-BD2E-749AED2C05F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12DA26D0-F000-44FE-8C9A-CC1A03CF489A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44BCEE67-6DB9-4CC8-BD0E-CE2E0E17548B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	GlobalSection(NestedProjects) = preSolution
+		{C00C6549-3BFE-4E4F-B571-AB9ACE67A5DC} = {A4672BBE-9D46-4CFB-9CBE-DB3D50542A7A}
+		{9D4E16B3-457F-4F26-AA6F-3BDAB193F6AF} = {7880F9F4-6328-4E12-89CC-FDB6059896FA}
 	EndGlobalSection
 EndGlobal

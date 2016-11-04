@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Stock Inquiry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("Find", "SKU"))
+{
+    <div>Stock search</div>
+    <input id="search" name="stylecode" class="text-left"/>
+    <input id="submit" value="Find" type="submit" class="btn btn-primary"/>
+}
